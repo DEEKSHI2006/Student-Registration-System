@@ -1,0 +1,128 @@
+/* styles.css - Green Black Hacker Theme */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #000000; /* solid black */
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #00ff00; /* neon green text default */
+    text-shadow: 0 0 5px #00ff00;
+}
+
+form {
+    background: #111111; /* very dark grey */
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px #00ff00aa; /* green glow */
+    width: 400px;
+    max-width: 90%;
+    border: 1px solid #00ff00;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 700;
+    color: #00ff00;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 0 0 15px #00ff00;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #00ff00cc;
+    letter-spacing: 0.5px;
+}
+
+input[type="text"],
+input[type="password"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px 14px;
+    margin-bottom: 18px;
+    border: 2px solid #00ff00;
+    border-radius: 8px;
+    background: #000000;
+    color: #00ff00;
+    font-size: 16px;
+    font-family: 'Courier New', monospace;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder,
+textarea::placeholder {
+    color: #00ff0055;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #00ff00;
+    box-shadow: 0 0 15px #00ff00;
+    background: #002200;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 8px;
+    accent-color: #00ff00;
+}
+
+.options-label {
+    display: inline-block;
+    margin-right: 15px;
+    font-weight: 500;
+    color: #00ff00cc;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+    background: #000000;
+    color: #00ff00;
+}
+
+.buttons {
+    text-align: center;
+    margin-top: 10px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    background-color: #00ff00;
+    color: #000000;
+    border: none;
+    padding: 12px 26px;
+    margin: 10px 8px 0 8px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 700;
+    text-transform: uppercase;
+    box-shadow: 0 0 15px #00ff00;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: 'Courier New', monospace;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #009900;
+    color: #00ff00;
+    box-shadow: 0 0 20px #00ff00;
+}
+

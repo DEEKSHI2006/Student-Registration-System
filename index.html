@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details Form</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <script>
+        function validateForm() {
+
+            let name = document.getElementById("name").value.trim();
+            let password = document.getElementById("password").value.trim();
+            let gender = document.querySelector('input[name="g"]:checked');
+            let hobbies = document.querySelectorAll('input[name="hobbies"]:checked');
+            let department = document.getElementById("dept").value;
+            let address = document.getElementById("address").value.trim();
+
+            let nameRegex = /^[A-Za-z\s]{2,}$/;
+
+            if (name === "") {
+                alert("Please enter your name.");
+                return false;
+            }
+
+            if (!nameRegex.test(name)) {
+                alert("Name should contain only letters and spaces.");
+                return false;
+            }
+
+            if (password === "") {
+                alert("Please enter your password.");
+                return false;
+            }
+
+            if (password.length < 8) {
+                alert("Password should be at least 8 characters long.");
+                return false;
+            }
+
+            if (!gender) {
+                alert("Please select your gender.");
+                return false;
+            }
+
+            if (hobbies.length === 0) {
+                alert("Please select at least one hobby.");
+                return false;
+            }
+
+            if (department === "") {
+                alert("Please select your department.");
+                return false;
+            }
+
+            if (address === "") {
+                alert("Please enter your address.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+
+</head>
+
+<body>
+
+<form id="studentForm">
+
+    <h2>Student Details</h2>
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" size="25">
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password">
+
+    <label>Gender:</label>
+
+    <label class="options-label">
+        <input type="radio" name="g" value="Male">
+        Male
+    </label>
+
+    <label class="options-label">
+        <input type="radio" name="g" value="Female">
+        Female
+    </label>
+
+    <label>Hobbies:</label>
+
+    <label class="options-label">
+        <input type="checkbox" name="hobbies" value="Reading">
+        Reading
+    </label>
+
+    <label class="options-label">
+        <input type="checkbox" name="hobbies" value="Playing">
+        Playing
+    </label>
+
+    <label for="dept">Department:</label>
+
+    <select id="dept" name="department">
+        <option value="">-- Select --</option>
+        <option value="IT">IT</option>
+        <option value="CSE">CSE</option>
+    </select>
+
+    <label for="address">Address:</label>
+
+    <textarea id="address" name="address" rows="4" cols="30"></textarea>
+
+    <div class="buttons">
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </div>
+
+</form>
+
+<script src="script.js"></script>
+
+</body>
+</html>

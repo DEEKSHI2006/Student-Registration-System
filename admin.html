@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Student Registration Dashboard</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+
+        body{
+            background:black;
+            color:lime;
+            font-family:Consolas;
+        }
+
+        h1{
+            text-align:center;
+            margin-top:30px;
+        }
+
+        .cards{
+
+            display:flex;
+            justify-content:center;
+            gap:20px;
+            flex-wrap:wrap;
+            margin:30px;
+
+        }
+
+        .card{
+
+            width:180px;
+            padding:20px;
+            text-align:center;
+            border:2px solid lime;
+            border-radius:10px;
+            box-shadow:0 0 15px lime;
+
+        }
+
+        .card h2{
+
+            margin:0;
+
+        }
+
+        #search{
+
+            width:300px;
+            padding:10px;
+            border-radius:8px;
+            border:2px solid lime;
+            background:black;
+            color:lime;
+            font-size:18px;
+
+        }
+
+        table{
+
+            width:90%;
+            margin:auto;
+            border-collapse:collapse;
+
+        }
+
+        table,th,td{
+
+            border:1px solid white;
+
+        }
+
+        th,td{
+
+            padding:10px;
+            text-align:center;
+
+        }
+
+        button{
+
+            padding:8px 15px;
+            cursor:pointer;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<h1>Student Registration Dashboard</h1>
+
+<div class="cards">
+
+<div class="card">
+
+<h2 id="total">0</h2>
+
+<p>Total Students</p>
+
+</div>
+
+<div class="card">
+
+<h2 id="male">0</h2>
+
+<p>Male</p>
+
+</div>
+
+<div class="card">
+
+<h2 id="female">0</h2>
+
+<p>Female</p>
+
+</div>
+
+<div class="card">
+
+<h2 id="it">0</h2>
+
+<p>IT</p>
+
+</div>
+
+<div class="card">
+
+<h2 id="cse">0</h2>
+
+<p>CSE</p>
+
+</div>
+
+</div>
+
+<center>
+
+<input
+type="text"
+id="search"
+placeholder="Search Student..."
+onkeyup="searchStudent()">
+
+</center>
+
+<br><br>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Name</th>
+<th>Gender</th>
+<th>Department</th>
+<th>Hobbies</th>
+<th>Address</th>
+<th>Delete</th>
+
+</tr>
+
+</thead>
+
+<tbody id="tableBody">
+
+</tbody>
+
+</table>
+
+<script src="admin.js"></script>
+
+</body>
+
+</html>
